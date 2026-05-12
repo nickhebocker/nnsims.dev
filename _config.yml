@@ -1,9 +1,0 @@
-title: NNsims.dev
-email: nickhebocker@gmail.com
-github_username: nickhebocker
-storage_url: "https://github.com/nickhebocker?tab=repositories"
-
-# Build settings
-incremental: true
-encoding: "utf-8"
-future: true
