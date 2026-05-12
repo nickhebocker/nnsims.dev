@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --accent: #58a6ff;
+      --text-main: #e6edf3;
+      --text-dim: #8b949e;
+      --nav-bg: rgba(22, 27, 34, 0.8);
+      --card-bg: #161b22;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed; top: 0; width: 100%; height: 60px;
+      background: var(--nav-bg); backdrop-filter: blur(10px);
+      border-bottom: 1px solid #30363d; z-index: 1000;
+      display: flex; justify-content: center; align-items: center;
+    }
+
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a {
+      color: var(--text-dim); text-decoration: none;
+      font-size: 0.95rem; font-weight: 500; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    .hero {
+      display: flex; flex-direction: column; justify-content: center;
+      align-items: center; height: 100vh; text-align: center; padding: 20px;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      margin-bottom: 0.5rem;
+      background: linear-gradient(90deg, #fff, var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tagline {
+      color: var(--text-dim); margin-bottom: 2rem;
+      text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;
+    }
+
+    section { padding: 100px 20px; max-width: 900px; margin: 0 auto; text-align: center; }
+
+    .card {
+      background: var(--card-bg); border: 1px solid #30363d;
+      border-radius: 12px; padding: 40px; margin-top: 20px;
+    }
+
+    .cta-button {
+      display: inline-block; color: var(--accent); text-decoration: none;
+      border: 1px solid var(--accent); padding: 12px 32px;
+      border-radius: 50px; font-weight: bold; transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: var(--accent); color: var(--bg);
+      box-shadow: 0 0 20px rgba(88, 166, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      padding: 60px 20px; text-align: center;
+      color: var(--text-dim); font-size: 0.85rem;
+      border-top: 1px solid #30363d;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="https://github.com/{{ site.github_username }}" target="_blank">Projects</a>
+      <a href="#storage">Storage</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  {{ content }}
+
+  <footer>
+    <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }} | Built with Jekyll</p>
+  </footer>
+
+</body>
+</html>
