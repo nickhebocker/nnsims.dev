@@ -3,124 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nnsims.dev</title>
+    <title>Nicholas Scott Sims | nssims.dev</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         html { scroll-behavior: smooth; }
         .section-min-height { min-height: 100vh; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans">
+<body class="bg-slate-950 text-slate-100 font-sans">
 
-    <!-- Navigation Bar -->
-    <nav class="fixed top-0 w-full bg-slate-800/90 backdrop-blur-md border-b border-slate-700 z-50">
-        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="text-xl font-bold tracking-tighter text-blue-400">
-                nnsims<span class="text-slate-100">.dev</span>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full glass border-b border-slate-800 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="text-xl font-bold tracking-tight">
+                <span class="text-blue-500">nssims</span><span class="text-slate-400">.dev</span>
             </div>
-            <div class="space-x-8">
-                <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#home" class="hover:text-blue-400 transition-colors">About</a>
                 <a href="#storage" class="hover:text-blue-400 transition-colors">Storage</a>
                 <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content Wrapper -->
     <main>
-
-        <!-- 1. Landing / Home Section -->
-        <section id="home" class="section-min-height flex flex-col items-center justify-center text-center px-4">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-                Neural Network Simulations
-            </h1>
-            <p class="text-lg text-slate-400 max-w-2xl mb-8">
-                Exploring the intersection of artificial intelligence, data architecture, and high-performance computing. Welcome to the lab.
-            </p>
-            <div class="flex gap-4">
-                <a href="#projects" class="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-lg font-medium transition-all">View Projects</a>
-                <a href="#storage" class="border border-slate-600 hover:bg-slate-800 px-6 py-3 rounded-lg font-medium transition-all">Data Archive</a>
+        <!-- Landing Section (Home/About) -->
+        <section id="home" class="section-min-height flex flex-col items-center justify-center px-6">
+            <div class="max-w-3xl text-center">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
+                    Nicholas Scott Sims
+                </h1>
+                <p class="text-xl md:text-2xl text-blue-400 font-light mb-8">
+                    Developer. Designer. Digital Architect.
+                </p>
+                <div class="h-1 w-20 bg-blue-600 mx-auto mb-8"></div>
+                <p class="text-slate-400 leading-relaxed mb-10">
+                    Welcome to my personal development space. This site serves as a hub for my 
+                    active projects, data storage solutions, and technical documentation.
+                </p>
+                <a href="#projects" class="inline-block bg-white text-slate-950 px-8 py-3 rounded-full font-bold hover:bg-blue-500 hover:text-white transition-all">
+                    Explore My Work
+                </a>
             </div>
         </section>
 
-        <hr class="border-slate-800 mx-auto max-w-4xl">
-
-        <!-- 2. Storage Section -->
-        <section id="storage" class="section-min-height py-24 px-4 max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
-                <span class="text-blue-400">01.</span> Storage & Datasets
-            </h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- Mock Storage Card -->
-                <div class="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-blue-500 transition-all">
-                    <div class="text-blue-400 mb-4">📂</div>
-                    <h3 class="text-xl font-semibold mb-2">Training Clusters</h3>
-                    <p class="text-sm text-slate-400">Centralized repository for pre-processed neural datasets and weight checkpoints.</p>
+        <!-- Storage Section -->
+        <section id="storage" class="py-32 px-6 bg-slate-900/50">
+            <div class="max-w-6xl mx-auto">
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold mb-2">Storage Vault</h2>
+                    <p class="text-slate-500">Resource management and data repositories.</p>
                 </div>
-                <div class="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-blue-500 transition-all">
-                    <div class="text-emerald-400 mb-4">💾</div>
-                    <h3 class="text-xl font-semibold mb-2">Active Logs</h3>
-                    <p class="text-sm text-slate-400">Real-time telemetry storage for ongoing simulation iterations and epoch results.</p>
-                </div>
-                <div class="p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-blue-500 transition-all">
-                    <div class="text-purple-400 mb-4">🛡️</div>
-                    <h3 class="text-xl font-semibold mb-2">Backups</h3>
-                    <p class="text-sm text-slate-400">Redundant versioning for model architectures and environment configurations.</p>
-                </div>
-            </div>
-        </section>
-
-        <hr class="border-slate-800 mx-auto max-w-4xl">
-
-        <!-- 3. Projects Section -->
-        <section id="projects" class="section-min-height py-24 px-4 max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
-                <span class="text-blue-400">02.</span> Featured Projects
-            </h2>
-            <div class="space-y-12">
-                <!-- Project Item -->
-                <div class="group grid md:grid-cols-2 gap-8 items-center">
-                    <div class="aspect-video bg-slate-800 rounded-lg overflow-hidden border border-slate-700">
-                        <div class="w-full h-full flex items-center justify-center text-slate-600 font-mono italic">
-                            [ Project Preview Image ]
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Storage Box 1 -->
+                    <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition-colors">
+                        <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 7v10c0 1.1.9 2 2 2h12a2 2 0 002-2V7M4 7a2 2 0 012-2h12a2 2 0 012 2M4 7l8 5 8-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </div>
+                        <h3 class="text-xl font-bold mb-3">Asset Library</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Centralized hosting for project assets, media files, and static resources used across my development environment.</p>
                     </div>
-                    <div>
-                        <h3 class="text-2xl font-bold mb-4 group-hover:text-blue-400 transition-colors">Project Aegis</h3>
-                        <p class="text-slate-400 mb-6 leading-relaxed">
-                            A distributed simulation environment designed to test adversarial attacks against multi-layer perceptron models in real-time.
-                        </p>
-                        <div class="flex gap-2 text-xs font-mono uppercase tracking-widest text-blue-300">
-                            <span>Python</span> • <span>PyTorch</span> • <span>Docker</span>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Repeatable Project Item -->
-                <div class="group grid md:grid-cols-2 gap-8 items-center">
-                    <div class="aspect-video bg-slate-800 rounded-lg overflow-hidden border border-slate-700 md:order-last">
-                        <div class="w-full h-full flex items-center justify-center text-slate-600 font-mono italic">
-                            [ Project Preview Image ]
+                    <!-- Storage Box 2 -->
+                    <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition-colors">
+                        <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </div>
+                        <h3 class="text-xl font-bold mb-3">Docs & Configs</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Version-controlled configuration files and technical documentation for rapid deployment of new instances.</p>
                     </div>
-                    <div>
-                        <h3 class="text-2xl font-bold mb-4 group-hover:text-blue-400 transition-colors">NeuralNexus</h3>
-                        <p class="text-slate-400 mb-6 leading-relaxed">
-                            A visual graphing tool for mapping 4D weights into 3D space to identify clusters of high activation within deep learning layers.
-                        </p>
-                        <div class="flex gap-2 text-xs font-mono uppercase tracking-widest text-emerald-300">
-                            <span>Three.js</span> • <span>Rust</span> • <span>WASM</span>
+
+                    <!-- Storage Box 3 -->
+                    <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition-colors">
+                        <div class="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </div>
+                        <h3 class="text-xl font-bold mb-3">Database Backups</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Secure, redundant storage for application data ensuring high availability and disaster recovery.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Projects Section -->
+        <section id="projects" class="py-32 px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold mb-16 italic text-center">Recent Projects by Nicholas</h2>
+                
+                <div class="space-y-24">
+                    <!-- Project 1 -->
+                    <div class="flex flex-col lg:flex-row gap-12 items-center">
+                        <div class="w-full lg:w-1/2">
+                            <div class="bg-gradient-to-br from-blue-600 to-blue-900 aspect-video rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center">
+                                <span class="text-white/20 font-black text-6xl">01</span>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2">
+                            <h3 class="text-3xl font-bold mb-4 uppercase tracking-tighter">System Nexus</h3>
+                            <p class="text-slate-400 text-lg mb-6">A custom-built dashboard for monitoring local server health and network traffic, built with React and Node.js.</p>
+                            <ul class="flex flex-wrap gap-3">
+                                <li class="px-4 py-1 bg-slate-800 rounded-full text-xs font-mono">React</li>
+                                <li class="px-4 py-1 bg-slate-800 rounded-full text-xs font-mono">WebSockets</li>
+                                <li class="px-4 py-1 bg-slate-800 rounded-full text-xs font-mono">Tailwind</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="flex flex-col lg:flex-row-reverse gap-12 items-center">
+                        <div class="w-full lg:w-1/2">
+                            <div class="bg-gradient-to-br from-slate-700 to-slate-900 aspect-video rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center">
+                                <span class="text-white/20 font-black text-6xl">02</span>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2 lg:text-right">
+                            <h3 class="text-3xl font-bold mb-4 uppercase tracking-tighter">Script Archive</h3>
+                            <p class="text-slate-400 text-lg mb-6">A collection of automation scripts for streamlining dev-ops workflows and cloud infrastructure management.</p>
+                            <ul class="flex flex-wrap gap-3 lg:justify-end">
+                                <li class="px-4 py-1 bg-slate-800 rounded-full text-xs font-mono">Python</li>
+                                <li class="px-4 py-1 bg-slate-800 rounded-full text-xs font-mono">Bash</li>
+                                <li class="px-4 py-1 bg-slate-800 rounded-full text-xs font-mono">AWS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="py-12 text-center text-slate-500 text-sm border-t border-slate-800">
-        <p>&copy; 2026 nnsims.dev. All rights reserved.</p>
+    <footer class="py-20 border-t border-slate-900 text-center">
+        <p class="text-slate-600 text-sm">
+            &copy; 2026 Nicholas Scott Sims • Designed for nssims.dev
+        </p>
     </footer>
 
 </body>
