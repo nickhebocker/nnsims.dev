@@ -1,0 +1,9 @@
+title: NNsims.dev
+email: nickhebocker@gmail.com
+github_username: nickhebocker
+# If you have a specific storage URL (like a Google Drive or Dropbox link), replace the '#' below.
+storage_url: "https://github.com/nickhebocker?tab=repositories"
+
+# Build settings
+incremental: true
+encoding: "utf-8"
