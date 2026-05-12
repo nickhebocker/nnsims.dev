@@ -3,30 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nnsims.dev</title>
+    <title>nnsims.dev | Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Importing a clean font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="top-bar">
-        <nav class="nav-container">
-            <div class="logo">nnsims<span>.dev</span></div>
-            <ul class="nav-menu">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="brand">nnsims<span>.dev</span></a>
+            
+            <!-- Mobile Menu Toggle (Checkbox Hack) -->
+            <input type="checkbox" id="nav-check">
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#storage">Storage</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#llm">LLM</a></li>
                 <li><a href="#logbook">Logbook</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
+
+    <header id="home" class="section hero-section">
+        <div class="container">
+            <h1>Personal Site Hub</h1>
+            <p>Developer, Architect, and LLM Enthusiast.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn primary">View Projects</a>
+                <a href="#logbook" class="btn secondary">Read Logbook</a>
+            </div>
+        </div>
     </header>
 
-    <main class="content">
-        <section id="home">
-            <h1>Personal Site Hub</h1>
-            <p>Welcome to the dashboard.</p>
-        </section>
-    </main>
+    <section id="storage" class="section bg-alt">
+        <div class="container">
+            <h2>Storage</h2>
+            <p>Centralized data management and cloud architecture documentation.</p>
+            <div class="grid">
+                <div class="card">Cloud Storage</div>
+                <div class="card">Local NAS</div>
+                <div class="card">Backups</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <p>Current builds and open-source contributions.</p>
+            <div class="grid">
+                <div class="card">Web Apps</div>
+                <div class="card">Automation Tools</div>
+                <div class="card">API Integrations</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="llm" class="section bg-alt">
+        <div class="container">
+            <h2>LLM</h2>
+            <p>Developments in Large Language Models and AI workflows.</p>
+            <div class="card">Prompt Engineering & Model Fine-tuning</div>
+        </div>
+    </section>
+
+    <section id="logbook" class="section">
+        <div class="container">
+            <h2>Logbook</h2>
+            <p>Chronological updates on learning and system changes.</p>
+            <div class="log-entry">
+                <strong>Current Status:</strong> Site v1.0 deployed successfully.
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 nnsims.dev | Built for performance.</p>
+    </footer>
 
 </body>
 </html>
